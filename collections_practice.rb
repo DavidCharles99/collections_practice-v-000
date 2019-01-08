@@ -35,5 +35,10 @@ def sum_array(array)
 end
 
 def add_s(array)
-  array.inject(0,2,3) {|a| a + "s"}
+  array.each_with_index.collect do |a|
+    if array[1] == a 
+      a
+    else 
+      a + "s"
+end
 end
